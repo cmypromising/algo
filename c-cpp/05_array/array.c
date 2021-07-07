@@ -59,7 +59,7 @@ int search(struct array *array, int elem)
 	for (idx = 0; idx < array->used; idx++) {
 		if (array->arr[idx] == elem)
 			return idx;
-		if (array->arr[idx] > elem)
+		if (idx == array->used)
 			return -1;
 	}
 
